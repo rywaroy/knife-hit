@@ -6,11 +6,6 @@ const py = 260; // 中心点y
 const r = 60; // 球半径
 const aw = 10; // 箭头宽
 const ah = 50; // 箭头长
-// const canvas = document.getElementById('canvas');
-// const ctx = canvas.getContext('2d');
-
-canvas.width = screenWidth;
-canvas.height = screenHeight;
 
 const Arrow = {
   id: null,
@@ -109,7 +104,7 @@ const Arrow = {
 
       // 检查碰撞
       for (let i = 0; i < this.inArrow.length; i++) {
-        if (Math.abs(this.inArrow[i].deg - 180) <= 6) {
+        if (Math.abs(this.inArrow[i].deg - 180) <= 5) {
           res = true;
         }
       }
